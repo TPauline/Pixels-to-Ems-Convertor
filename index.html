@@ -1,4 +1,4 @@
-<!DOCTYPE>
+<!DOCTYPE >
 <html lang="en">
 
 <head>
@@ -13,20 +13,23 @@
 <body>
 
     <div id="wrapper">
+        <label id="title">Pixels to Ems Conversion </label>
         <form id="mainArea">
-            <label for="default" id="l1">Set a default pixel size:</label><br>
-            <input type="text" id="default" name="default">px<br>
-            <label for="convertPX id="l2>Convert PX to EM</label><br>
-            <input type="text" id="convertPX" name="convertPX">px<br>
-             <label for="convertEM id="l3>Convert EM to PX</label><br>
-            <input type="text" id="convertEM " name="convertEM">em<br>
-            <button type="button"><i class="fa fa-exchange"></i>Convert</button>
-
+            <label for="default" id="l1"> a default pixel size:</label>
+            <input type="text" id="default" name="default">
+            <label for="convertPX" id="l2">Convert PX to EM</label>
+            <input type="text" id="convertPX" name="convertPX">
+            <label for="convertEM" id="l3">Convert EM to PX</label>
+            <input type="text" id="convertEM" name="convertEM">
             
-          </form>
+            <button type="button"><i class="fa fa-exchange"></i> Convert</button>
+            <label id="pxd"> px</label>
+            <label id="pxc"> px</label>
+            <label id="em"> em</label>
+        </form>
 
-          <div id="buttomLine"></div>
-          <label id="result">Result:</label>
+        <div id="buttomLine"></div>
+        <label id="result">Result:</label>
     </div>
 
     <script src='script.js'></script>
