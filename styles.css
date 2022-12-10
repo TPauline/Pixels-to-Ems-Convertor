@@ -46,6 +46,14 @@ button,
   position: absolute;
 }
 
+#default,
+#convertPX,
+#convertEM{
+  color: black;
+  font-size: 24px;
+  font-family: Verdana, sans-serif;
+}
+
 #title{
 top: 3%;
 left: 40%;
