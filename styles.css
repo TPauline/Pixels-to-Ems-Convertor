@@ -73,11 +73,12 @@ left: 40%;
 
 #pxc{
   top: 25%;
-  left: 26%;
+  left: calc(15% + 148px);
 }
 
 
 #l2 {
+  left: 15%;
   top: 40%;
   left: 15.5%;
 }
@@ -89,7 +90,7 @@ left: 40%;
 
 #pxd{
   top: 45%;
-  left: 26%;
+  left:calc(15% + 148px);
 }
 
 #l3 {
@@ -105,7 +106,7 @@ left: 40%;
 
 #em{
   top: 45%;
-  left: 81%;
+  left: calc(70% + 148px);
 }
 
 #result {
@@ -124,8 +125,11 @@ button {
   display: inline-block;
   font-size: 16px;
   border-radius: 0.3125em;
-  width: 148px;
-  height: 45px;
+
+  /* width: calc( 148px / 80% );
+  height: calc( 145px / 80% ); */
+  width: calc( 148px / 80% );
+  height: calc( 145px / 80% );
   top: 55%;
   left: 15%;
 }
@@ -149,3 +153,6 @@ input {
   color: #ffffff;
 }
 
+label{
+  font-size: 1em;
+}

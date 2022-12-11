@@ -4,15 +4,8 @@ const defaultInput = document.getElementById('default');
 const convertPX = document.getElementById('convertPX');
 const convertEM = document.getElementById('convertEM');
 const calResult = document.getElementById('result');
+console.log(navigator)
 
-// const letters = new Set(["a","b","c"]);
-
-
-// window.getComputedStyle(document.body) - to get all the styles for body
-// getPropertyValue('font-size') - to get a string value of font-size, example: (16px)
-// match(/\d+/)[0]) - to get only a number part, example: (16) - string
-// Number(...) - to convert number part into a number, example: (16) - number
-//const fontSize = Number(window.getComputedStyle(document.body).getPropertyValue('font-size').match(/\d+/)[0])
 const fontSize = Number(window.getComputedStyle(document.body).getPropertyValue('font-size').match(/\d+/)[0])
 let defaultSize = null
 
@@ -25,8 +18,8 @@ console.log(wrapper.style);
 
 function setUp() {
 
-    // wrapper.style.width = window.innerWidth;
-    // wrapper.style.height = window.innerHeight;
+    wrapper.style.width = window.innerWidth;
+    wrapper.style.height = window.innerHeight;
     document.body.clientWidth = window.innerWidth;
     document.body.clientHeight = window.innerHeight;
     console.log("new body dimensions: (", document.body.clientHeight, ",", document.body.clientWidth, ")");
@@ -42,9 +35,6 @@ function enableDisable(node) {
         node.disabled = true;
     }
 }
-
-// convertPX.disabled = true
-// convertEM.disabled = true
 enableDisable(convertPX)
 enableDisable(convertEM)
 
@@ -64,11 +54,6 @@ function piexl_To_em(R, P) {
 
 
 function em_To_piexl(EM, P) {
-    /*Where,
-        R = Required PX Size
-        P = Parent PX Size
-    */
-    // const EM = R / P;
     if(!isNaN(P)){
     const R = EM * P;
     console.log(`converted to em is ${R}px`)
@@ -78,37 +63,32 @@ function em_To_piexl(EM, P) {
 
 piexl_To_em(16, fontSize)
 em_To_piexl(16, fontSize)
+
 /**Event Listeningers */
 window.addEventListener("resize", () => {
-    // document.body.clientWidth = window.innerWidth;
-    // document.body.clientHeight = window.innerHeight;
-    // console.log("new body dimensions: (", document.body.clientHeight, ",", document.body.clientWidth, ")");
-    // wrapper.style.width = document.body.clientWidth;
-    // wrapper.style.height = document.body.clientHeight;
     setUp()
-
 })
 
-defaultInput.addEventListener("change", () => {
-    console.log("enter default");
+// defaultInput.addEventListener("change", () => {
+//     console.log("enter default");
 
-    convertPX.disabled = false
-    convertEM.disabled = true
-});
+//     convertPX.disabled = false
+//     convertEM.disabled = true
+// });
 
-convertPX.addEventListener("click", () => {
-    console.log("enter px");
+// convertPX.addEventListener("click", () => {
+//     console.log("enter px");
 
-    convertPX.disabled = false
-    convertEM.disabled = true
-});
+//     convertPX.disabled = false
+//     convertEM.disabled = true
+// });
 
-convertEM.addEventListener("click", () => {
-    console.log("enter em");
+// convertEM.addEventListener("click", () => {
+//     console.log("enter em");
 
-    convertPX.disabled = true
-    convertEM.disabled = false
-});
+//     convertPX.disabled = true
+//     convertEM.disabled = false
+// });
 
 
 // document.addEventListener('click',  (e) => {
